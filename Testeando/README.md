@@ -2,9 +2,10 @@
 
 In this file I explore the 2 Classes
 
-## Scanner Class
+## -Scanner Class
+
 -To save inputs in the memory through console
 
-## JOption Class
+## -JOptionPane Class
 
 -To save inputs in the memory through emergent window inputs
