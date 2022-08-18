@@ -1,6 +1,6 @@
 import java.util.Scanner; //Console inputs
 import javax.swing.JOptionPane; //Emergent window inputs 
-public class App {
+public class Inputs {
  
 	static Scanner sc = new Scanner(System.in);
 
