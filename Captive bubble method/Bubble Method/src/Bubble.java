@@ -30,6 +30,9 @@ public class Bubble {
                 }
             }
         }
+
+        //Mostrar arreglo ordenado
+        
         System.out.println("\nArreglo ordenado en forma creciente: ");
         for(int i=0;i<nElements;i++){
             System.out.print(array[i]+" - ");
@@ -40,5 +43,5 @@ public class Bubble {
             System.out.print(array[i]+" - ");
         }
         System.out.print("");
-        }
+    }
 }
