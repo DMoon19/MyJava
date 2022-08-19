@@ -10,7 +10,7 @@ public class Ternario {
 
        numero=Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
     
-       mensaje=(numero%2==0) ? "es Par" : "es Imgpar";
+       mensaje=(numero%2==0) ? "es Par" : "es Impar";
 
        JOptionPane.showMessageDialog(null, mensaje);
     }
