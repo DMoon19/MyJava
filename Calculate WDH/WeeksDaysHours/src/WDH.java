@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class WDH {
+
+    static Scanner sc=new Scanner(System.in);
     public static void main(String[] args) throws Exception {
     
-        Scanner sc=new Scanner(System.in);
+  
 
         int H, w,d,h;
 
