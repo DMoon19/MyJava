@@ -26,29 +26,33 @@ public class Empleados {
             System.out.println("Usted no goza de Auxilio de Transporte");
         }
     }
-    System.out.println("Salario: "+salario);
-    System.out.println("Aporte Salud: "+salarioProvisional/2);
-    System.out.println("Aporte Pensión: "+salarioProvisional/2);
+    System.out.println("Salario: "+salario+" COP");
+    System.out.println("Aporte Salud: "+salarioProvisional/2+" COP");
+    System.out.println("Aporte Pensión: "+salarioProvisional/2+" COP");
     
-    System.out.println("Prima: "+salario/2);
+    System.out.println("Prima: "+salario/2+" COP");
 
         
     }
     public void consultarLiquiVacaciones(){
         
-        if(fechaIngreso>=48){
-        System.out.println("Tiene 45 días pendientes de vacaciones remuneradas");
+    	if(fechaIngreso>60) {
+    	System.out.println("Sus vacaciones ya se le debieron de ser pagadas");
+    	}
+    	else if(fechaIngreso>=48){
+        System.out.println("Tiene 60 días pendientes de vacaciones remuneradas");
         }
         else  if(fechaIngreso>=36){
-        System.out.println("Tiene 30 días pendientes de vacaciones remuneradas");
+        System.out.println("Tiene 45 días pendientes de vacaciones remuneradas");
         }
         else  if(fechaIngreso>=24){
-        System.out.println("Tiene 15 días pendientes de vacaciones remuneradas");
+        System.out.println("Tiene 30 días pendientes de vacaciones remuneradas");
         }
         else if(fechaIngreso>=12){
-        System.out.println("Tiene 0 días pendientes de vacaciones remuneradas");
+        System.out.println("Tiene 15 días pendientes de vacaciones remuneradas");
         }else{
-            System.out.print("");
+        	
+            System.out.print("Error");
         }
     }
     public void ingresarDatos(){
