@@ -25,7 +25,7 @@ public class Operativos extends Empleados {
           System.out.println("Curso #9: "+curso9);
           }
     }
-    protected void ActualizarCursos(){ //No me da xd
+    protected void actualizarCursos(){ //No me da xd
       
         for(int i=0;i<10;i=i+1){
           System.out.println("Qué cursos ha realizado?");
@@ -133,10 +133,24 @@ public class Operativos extends Empleados {
         
     }
     protected void consultarDescripcion(){
-       
+    	if(workplacePlanta!=null) {
+    		System.out.println("Su zona de trabajo es "+workplacePlanta);	
+    		System.out.println("Su cargo es el de "+oficioPlanta);
+    		System.out.println("Lo que hace como "+oficioPlanta+"en el"+workplacePlanta+" es:\n\n"+descripcionLabor);
+    	}else {
+    		System.out.println("Su zona de trabajo no ha sido ingresada, por favor ingresela:");
+    		actualizarDescripcion();
+    	}
+    	
     }
     protected void actualizarDescripcion(){
-        System.out.println("Qué labor desempeña:");
-
+    	System.out.println("\nEn que zona de la planta en la que trabaja?");
+    	workplacePlanta=sc.next();
+        System.out.println("Qué oficio desempeña en la "+workplacePlanta+"?");
+        oficioPlanta=sc.next();
+        System.out.println("Qué labores realiza como "+oficioPlanta+"?");
+        descripcionLabor=sc.next();
+    
+    
     }
 }
