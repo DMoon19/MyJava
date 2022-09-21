@@ -70,7 +70,7 @@ public class Program{
          else if(Empleado==2){ 
             Operativos op=new Operativos(); 
             op.ingresarDatos();
-            op.ActualizarCursos();
+            op.actualizarCursos();
             byte opcion;
             do{
             System.out.println("_____________________________________");
@@ -86,12 +86,12 @@ public class Program{
             opcion = sc.nextByte();
             switch (opcion){
                case 1:
-               emp.consultarDatos();
+               op.consultarDatos();
                System.out.println("Desea actualizar los datos?");
                System.out.println("1.Si                   2.No");
                int actuali=sc.nextInt();
                   if(actuali==1){
-                  emp.actualizarDatos();
+                  op.actualizarDatos();
                   }             
                      break;
                case 2:
@@ -100,11 +100,22 @@ public class Program{
                  System.out.println("1.Si                               2.No");
                  actuali=sc.nextInt();
                  if(actuali==1){
-                 op.ActualizarCursos();
+                 op.actualizarCursos();
+                 }else if(actuali==2) {
+                	 break;
                  }
                   break;
                case 3:
-                 //Labores xd
+                 op.consultarDescripcion();
+                 System.out.println("\nDesea actualizar la Descripción de Labor?");
+                 System.out.println("1.Si                               2.No");
+                 actuali=sc.nextInt();
+                 if(actuali==1){
+                 op.actualizarDescripcion();
+                 }
+                 else if(actuali==2) {
+                	 break;
+                 }
                    break;
                case 4:
                emp.consultarLiquiVacaciones();
@@ -119,7 +130,7 @@ public class Program{
       else if(Empleado==3){ 
          Operativos op=new Operativos(); 
          op.ingresarDatos();
-         op.ActualizarCursos();
+         op.actualizarCursos();
          byte opcion;
          do{
          System.out.println("______________________________________");
@@ -139,11 +150,23 @@ public class Program{
                  System.out.println("1.Si                               2.No");
                  int actuali=sc.nextInt();
                  if(actuali==1){
-                 op.ActualizarCursos();
+                 op.actualizarCursos();
+                 }
+                 else if(actuali==2) {
+                	 break;
                  }
                   break;
             case 2:
-               //Descripcion de labores
+            	op.consultarDescripcion();
+                System.out.println("\nDesea actualizar la Descripción de Labor?");
+                System.out.println("1.Si                               2.No");
+                actuali=sc.nextInt();
+                if(actuali==1){
+                op.actualizarDescripcion();
+                }
+                else if(actuali==2) {
+               	 break;
+                }
                break;
             case 3:
               emp.consultarLiquiVacaciones();
@@ -153,8 +176,6 @@ public class Program{
                break;   
          }
       }while (opcion!=0);
-   }   
-   }
+    }   
+  }
 }
-   
-
