@@ -5,14 +5,7 @@ static Empleados empleados=new Empleados();
 
     String titulosProfesionales;    
     int añosExp, numPersonas;
-    long numExtension;
-
-    public Administrativos(){
-        
-         
-       
-        
-    }
+    int numExtension;
     public void generarInformes(){
 
     }

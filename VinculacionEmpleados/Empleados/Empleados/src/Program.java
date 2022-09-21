@@ -1,24 +1,25 @@
 import java.util.Scanner;
 public class Program{
-       static Operativos op=new Operativos(); 
+       
        static Empleados emp=new Empleados();
-       static Administrativos adm=new Administrativos();
+      
        static Scanner sc=new Scanner(System.in);
 	public static void main(String[] args) {
 
         byte Empleado;
-        System.out.println("_________________________");
-        System.out.println("|     TIPO EMPLEADO     |");
-        System.out.println("|_______________________|");                         
-        System.out.println("|1. Administrativo      |");
-        System.out.println("|2. Operario Técnico    |");
-        System.out.println("|3. Operario No Técnico |");                        
-        System.out.println("|_______________________|\n");
+        System.out.println("________________________________________");
+        System.out.println("|            TIPO EMPLEADO             |");
+        System.out.println("|______________________________________|");                         
+        System.out.println("|1. Ingresar como Administrativo       |");
+        System.out.println("|2. Ingresar como Operario Técnico     |");
+        System.out.println("|3. Ingresar como Operario No Técnico  |");                        
+        System.out.println("|______________________________________|\n");
         Empleado=sc.nextByte();
     
          //Menú Administrativos
          if(Empleado==1){
-            emp.actualizarDatos();
+            Administrativos adm=new Administrativos();
+            adm.ingresarDatos();
             byte opcion;
             do{
             System.out.println("____________________________________");
@@ -34,12 +35,13 @@ public class Program{
             opcion = sc.nextByte();
             switch (opcion){
                case 1:
-             emp.consultarDatos();
+            adm.consultarDatos();
             System.out.println("Desea actualizar los datos?");
             System.out.println("1.Si                   2.No");
             int actuali=sc.nextInt();
                if(actuali==1){
-               emp.actualizarDatos();
+                  
+               adm.actualizarDatos();
                }             
                   break;
                case 2:
@@ -55,10 +57,10 @@ public class Program{
                   }
                   break;
                case 4:
-                 emp.consultarLiquiVacaciones();
+                 adm.consultarLiquiVacaciones();
                   break;
                case 5:
-                 emp.consultarLiquiNomina();
+                 adm.consultarLiquiNomina();
                   break;
             }
          }while (opcion!=0);
@@ -66,7 +68,8 @@ public class Program{
          
         //Menú Operativos Tec
          else if(Empleado==2){ 
-            emp.actualizarDatos();
+            Operativos op=new Operativos(); 
+            op.ingresarDatos();
             op.ActualizarCursos();
             byte opcion;
             do{
@@ -114,7 +117,8 @@ public class Program{
 
       //Menú Operativos No Tec
       else if(Empleado==3){ 
-         emp.actualizarDatos();
+         Operativos op=new Operativos(); 
+         op.ingresarDatos();
          op.ActualizarCursos();
          byte opcion;
          do{

@@ -51,15 +51,8 @@ public class Empleados {
             System.out.print("");
         }
     }
-    public void consultarDatos(){
-        System.out.print("___________________________________________________________________\nNombre: "+nombre+" "
-        +apellido+"\t                CC: "+cedula+
-        "\nDirección: "+direccion+" "+num+"\t        Celular: "+celular+
-        "\nCorreo: "+correo+"\tNacimiento: "+fechaCumple+
-        "\nIngreso a la Empresa: "+fechaIngreso+"\t        Salario: "+salario+
-        "\n___________________________________________________________________\n");
-    }
-    public void actualizarDatos(){
+    public void ingresarDatos(){
+        
         System.out.print("\n--------------------------------------------");
         System.out.print("\nDigite su nombre y apellido:");
         nombre=sc.next();
@@ -87,7 +80,61 @@ public class Empleados {
         System.out.print("Digite su salario:");
         salario=sc.nextInt();
         System.out.print("--------------------------------------------\n");
-        
+    }
+    public void consultarDatos(){       
+        System.out.println("___________________________________________________________________");
+        System.out.print("\nNombre: "+nombre+" "+apellido+"\t                CC: "+cedula);
+        System.out.print("\nDirección: "+direccion+" "+num+"\t        Celular: "+celular);
+        System.out.print("\nCorreo: "+correo+"\tNacimiento: "+fechaCumple);
+        System.out.print("\nIngreso a la Empresa: "+fechaIngreso+"\t        Salario: "+salario);
+        System.out.println("\n___________________________________________________________________");
+    }
+    public void actualizarDatos(){
+        System.out.println("Qué desea editar?");
+        System.out.println("1. Nombre y Apellido");
+        System.out.println("2. Cedula");
+        System.out.println("3. Dirección");
+        System.out.println("4. Celular");
+        System.out.println("5. Correo");
+        System.out.println("6. Nacimiento");
+        System.out.println("7. Ingreso a la Empresa");
+        System.out.println("8. Salario");
+        byte edit=sc.nextByte();
+        if(edit==1){
+            System.out.println("Ingrese Nombre y Apellido: ");
+            nombre=sc.next(); apellido=sc.next();
+        }
+        else if(edit==2){
+            System.out.println("Ingrese Cedula: ");
+            cedula=sc.nextInt();
+        }
+        else if(edit==3){
+            System.out.println("Ingrese Dirección: ");
+            direccion=sc.next(); num=sc.next();
+        }
+        else if(edit==4){
+            System.out.println("Ingrese Celular: ");
+            celular=sc.nextLong();
+        }
+        else if(edit==5){
+            System.out.println("Ingrese Correo: ");
+            correo=sc.next();
+        }
+        else if(edit==6){
+            System.out.println("Ingrese Fecha de Nacimiento: ");
+            fechaCumple=sc.next();
+        }
+        else if(edit==7){
+            System.out.println("Cuantos meses lleva en la Empresa?");
+            fechaIngreso=sc.nextInt();
+        }
+        else if(edit==8){
+            System.out.println("Ingrese Salario");
+            salario=sc.nextInt();
+        }
+        else{
+            System.out.println("Error");
+        }
     }
 
 }
